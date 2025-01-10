@@ -1,4 +1,4 @@
-# Machine Learning Boilerplate Project
+# ⚙️ Machine Learning Boilerplate Project
 
 This project provides a comprehensive pipeline for machine learning tasks, enabling seamless preprocessing, model training, and evaluation. The framework supports both classification and regression problems and is highly customizable.
 
@@ -26,59 +26,12 @@ Install the required libraries:
 pip3 install -r requirements.txt
 ```
 
-### Libraries Used
-- `pandas` for data manipulation.
-- `numpy` for numerical operations.
-- `scikit-learn` for preprocessing, modeling, and evaluation.
-- `seaborn` and `matplotlib` for visualization.
-
-## Usage
-
-### 1. Data Loading and Preprocessing
-- Load the dataset from a CSV file.
-- Split features (`X`) and target (`y`).
-- Automatically handle categorical variables with one-hot encoding.
-
-### 2. Model Training
-- Use predefined pipelines for various models:
-  - Classification: Random Forest, SVM, XGBoost, MLP.
-  - Regression: Linear Regression, Random Forest Regressor, SVR.
-- Configure hyperparameters with `GridSearchCV`.
-
-### 3. Evaluation
-- Perform cross-validation to select the best model.
-- Evaluate the model on the test set using appropriate metrics.
-- Visualize classification results using a confusion matrix heatmap.
-
-## Example Workflow
-1. Load and preprocess data:
-
-    ```python
-    data = pd.read_csv('data/data.csv')
-    X, y = preprocess_data(data)
-    ```
-
-2. Train models:
-
-    ```python
-    grid_search = GridSearchCV(pipeline, param_grid, scoring='accuracy', cv=5)
-    grid_search.fit(X_train, y_train)
-    ```
-
-3. Evaluate and visualize:
-
-    ```python
-    y_pred = grid_search.best_estimator_.predict(X_test)
-    plot_confusion_matrix(y_test, y_pred)
-    ```
-
 ## Directory Structure
 ```
 project/
 ├── data/
 │   └── data.csv
-├── src/
-│   └── main.ipynb
+├── main.ipynb
 ├── requirements.txt
 ├── README.md
 ```
